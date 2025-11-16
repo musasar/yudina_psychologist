@@ -958,6 +958,215 @@
                 font-size: 16px;
             }
         }
+
+            /* =========================================================
+            👇 MOBİL UYUMLULUK İYİLEŞTİRMELERİ (PROFESSIONAL)
+            ========================================================= */
+
+            /* 1) Genel mobil tipografi */
+            @media(max-width: 480px) {
+                body {
+                    font-size: 16px;
+                    line-height: 1.7;
+                    padding-bottom: 40px;
+                }
+
+                .section-title {
+                    font-size: 24px;
+                }
+                .section-sub {
+                    font-size: 14px;
+                }
+            }
+
+            /* 2) Header – taşma engellendi, padding optimize */
+            @media(max-width: 480px) {
+                .nav {
+                    padding: 12px 0;
+                }
+
+                .brand {
+                    font-size: 12px;
+                }
+                .brand .sub {
+                    font-size: 10px;
+                }
+            }
+
+            /* 3) Hero başlık – taşmaması için küçültme */
+            @media(max-width: 550px) {
+                .hero-title {
+                    font-size: 28px !important;
+                    line-height: 1.25;
+                }
+
+                .hero-sub {
+                    font-size: 15px;
+                    padding: 0 6px;
+                }
+            }
+
+            /* 4) Hero foto – tam mobil uyum */
+            @media(max-width: 550px) {
+                .hero-photo-wrap {
+                    max-width: 250px;
+                    margin-top: 20px;
+                }
+
+                .hero-tag,
+                .hero-tag-right {
+                    font-size: 10px;
+                    padding: 8px 12px;
+                }
+            }
+
+            /* 5) Butonlar – mobilde tam genişlik */
+            @media(max-width: 600px) {
+                .cta-row {
+                    flex-direction: column;
+                    gap: 12px;
+                }
+                .btn {
+                    width: 100%;
+                    justify-content: center;
+                    padding: 14px 22px;
+                    font-size: 15px;
+                }
+            }
+
+            /* 6) Hizmet kartları daha geniş ve okunaklı */
+            @media(max-width: 600px) {
+                .service-card {
+                    padding: 20px;
+                    border-radius: 14px;
+                }
+                .service-label {
+                    font-size: 16px;
+                }
+                .service-desc {
+                    font-size: 14px;
+                }
+            }
+
+            /* 7) Testimonials – daha yumuşak görünüm */
+            @media(max-width: 600px) {
+                .testimonial-card {
+                    padding: 20px;
+                }
+
+                .author-avatar {
+                    width: 40px;
+                    height: 40px;
+                }
+            }
+
+            /* 8) Form – tam ekran uyumlu */
+            @media(max-width: 600px) {
+                .contact-form {
+                    gap: 12px;
+                }
+                .form-input,
+                .form-textarea {
+                    font-size: 15px;
+                    padding: 14px;
+                }
+                .form-label {
+                    font-size: 13px;
+                }
+            }
+
+            /* 9) Sosyal ikonlar büyütüldü – kolay dokunma */
+            @media(max-width: 600px) {
+                .social-link {
+                    width: 50px;
+                    height: 50px;
+                    font-size: 20px;
+                }
+            }
+
+            /* 10) "Back to top" daha küçük */
+            @media(max-width: 500px) {
+                .back-to-top {
+                    width: 40px;
+                    height: 40px;
+                    font-size: 15px;
+                }
+            }
+
+            /* 11) Section padding azaltıldı (daha kompakt görünüm) */
+            @media(max-width: 600px) {
+                section {
+                    padding: 40px 0;
+                }
+                .section-card {
+                    padding: 22px 18px;
+                }
+            }
+
+    /* =========================================
+    GLOBAL ANTI-OVERFLOW FIX (Kesin Çözüm)
+    ========================================= */
+
+    html, body {
+        max-width: 100%;
+        overflow-x: hidden !important;
+    }
+
+    /* Hero içindeki absolute elemanlar taşma yapmasın */
+    .hero-tag,
+    .hero-tag-right {
+        max-width: 90%;
+        white-space: nowrap;
+    }
+
+    /* Hero grid taşma fix */
+    .hero-inner {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    /* Grid ve kartların taşmasını engelle */
+    * {
+        min-width: 0;
+    }
+
+    /* Fotoğrafın parent’ı taşma yapıyorsa çöz */
+    .hero-photo-wrap {
+        overflow: hidden;
+    }
+
+    /* Container güvenlik önlemi */
+    .container {
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    /* Mobilde padding fazla olup taşma yapıyorsa */
+    @media(max-width: 600px) {
+        .section-card {
+            padding-left: 16px !important;
+            padding-right: 16px !important;
+        }
+    }
+
+    /* FAQ toggle text taşması fix */
+    .faq-question {
+        flex-wrap: nowrap;
+        overflow: hidden;
+    }
+
+    /* Servis grid'i taşırsa otomatik dizilsin */
+    .services-grid {
+        grid-auto-flow: row;
+    }
+
+    /* Sosyal ikonların taşmasını engelle */
+    .social-links {
+        overflow: hidden;
+        flex-wrap: wrap;
+    }
+
+
     </style>
 </head>
 
