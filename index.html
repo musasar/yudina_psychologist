@@ -1,0 +1,1507 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+    <title>Психолог Ольга Юдіна | Сімейний та груповий психолог в Аланії</title>
+
+    <!-- ============= SEO ============= -->
+    <meta name="description" content="Професійна психологічна допомога онлайн та в Аланії. Сімейна терапія, консультації для пар, індивідуальні сесії. Telegram: @PsychologYudina.">
+    <meta name="keywords" content="психолог, Аланія психолог, сімейний психолог, онлайн терапія, консультація психолога, сімейна терапія, тривога, стрес">
+    <meta name="author" content="Olha Yudina">
+
+    <!-- OpenGraph -->
+    <meta property="og:title" content="Психолог Ольга Юдіна — Професійна психологічна допомога">
+    <meta property="og:description" content="Онлайн та офлайн консультації психолога в Аланії. Сімейна та індивідуальна терапія.">
+    <meta property="og:image" content="img/pp.jpg">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="uk_UA">
+
+    <!-- Favicon -->
+    <link rel="icon" href="img/fav.png" />
+
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- ===================================================================
+         INLINE PREMIUM CSS
+    =====================================================================-->
+    <style>
+        /* =====================
+           GLOBAL VARIABLES
+        ===================== */
+        :root {
+            --bg: #faf7ff;
+            --bg-soft: #ffffff;
+            --accent: #8d77ff;
+            --accent-dark: #6c55e6;
+            --accent-soft: rgba(141,119,255,0.12);
+            --text: #1f1f1f;
+            --muted: #6f6f6f;
+            --line: #e6e0fc;
+            --radius-lg: 26px;
+            --radius-md: 16px;
+            --radius-pill: 999px;
+            --shadow: 0 18px 45px rgba(90,70,180,0.14);
+            --shadow-soft: 0 14px 28px rgba(90,70,180,0.08);
+            --transition: .32s ease;
+            --success: #27c396;
+            --danger: #ff4b6a;
+            --telegram: #2AABEE;
+            --whatsapp: #25D366;
+        }
+
+        /* =====================
+           RESET + BASE
+        ===================== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Inter", sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.65;
+            overflow-x: hidden;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1180px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        section {
+            padding: 70px 0;
+        }
+
+        /* =====================
+           HEADER
+        ===================== */
+        .site-header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(255,255,255,0.93);
+            backdrop-filter: blur(14px);
+            border-bottom: 1px solid rgba(255,255,255,0.6);
+            transition: var(--transition);
+        }
+
+        .site-header.scrolled {
+            box-shadow: var(--shadow-soft);
+        }
+
+        .nav {
+            padding: 15px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 700;
+            font-size: 14px;
+            text-transform: uppercase;
+        }
+
+        .brand-badge {
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            background: radial-gradient(circle at 30% 0, #ffe8f4, #d4c9ff 55%, #8d72ff);
+            box-shadow: var(--shadow-soft);
+        }
+
+        .brand .sub {
+            font-size: 11px;
+            font-weight: 400;
+            color: var(--muted);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .nav-links a {
+            padding: 6px 12px;
+            border-radius: var(--radius-pill);
+            color: var(--muted);
+        }
+
+        .nav-links a:hover {
+            background: var(--accent-soft);
+            color: var(--accent-dark);
+        }
+
+        .nav-cta {
+            padding: 9px 20px;
+            background: var(--accent-dark);
+            border-radius: var(--radius-pill);
+            color: #fff;
+            font-size: 13px;
+            box-shadow: 0 10px 30px rgba(110,85,229,0.3);
+        }
+
+        .nav-cta:hover {
+            transform: translateY(-3px);
+        }
+
+        /* Mobile nav */
+        .nav-toggle {
+            display: none;
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            border: 1px solid var(--line);
+            background: #fff;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .nav-toggle span,
+        .nav-toggle span::before,
+        .nav-toggle span::after {
+            width: 22px;
+            height: 2px;
+            background: var(--accent-dark);
+            border-radius: 4px;
+            position: relative;
+            content: "";
+            display: block;
+        }
+
+        .nav-toggle span::before {
+            position: absolute;
+            top: -7px;
+            left: 0;
+        }
+
+        .nav-toggle span::after {
+            position: absolute;
+            top: 7px;
+            left: 0;
+        }
+
+        .nav-toggle.active span {
+            background: transparent;
+        }
+
+        .nav-toggle.active span::before {
+            transform: rotate(45deg);
+            top: 0;
+        }
+
+        .nav-toggle.active span::after {
+            transform: rotate(-45deg);
+            top: 0;
+        }
+
+        @media(max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 64px;
+                left: 0;
+                right: 0;
+                background: #fff;
+                flex-direction: column;
+                gap: 14px;
+                padding: 20px;
+                border-bottom: 1px solid var(--line);
+                box-shadow: 0 14px 30px rgba(0,0,0,0.05);
+            }
+
+            .nav-links.open {
+                display: flex;
+            }
+
+            .nav-cta {
+                display: none;
+            }
+
+            .nav-toggle {
+                display: flex;
+            }
+        }
+
+        /* =====================
+           HERO
+        ===================== */
+        .hero {
+            padding: 100px 0 80px;
+            position: relative;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: -40%;
+            right: -20%;
+            width: 720px;
+            height: 720px;
+            background: radial-gradient(circle, rgba(141,119,255,0.12) 0%, rgba(255,255,255,0) 80%);
+            z-index: -1;
+        }
+
+        .hero-inner {
+            display: grid;
+            grid-template-columns: 3fr 2fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        @media(max-width: 900px) {
+            .hero-inner {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+        }
+
+        .hero-badges {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .hero-badge {
+            padding: 8px 14px;
+            background: #fff;
+            border: 1px solid var(--line);
+            border-radius: var(--radius-pill);
+            font-size: 12px;
+            color: var(--muted);
+        }
+
+        .hero-badge.primary {
+            background: var(--accent-soft);
+            border: none;
+            color: var(--accent-dark);
+        }
+
+        .hero-title {
+            font-size: 44px;
+            font-weight: 700;
+            margin-bottom: 18px;
+        }
+
+        @media(max-width: 600px) {
+            .hero-title {
+                font-size: 34px;
+            }
+        }
+
+        .hero-sub {
+            color: var(--muted);
+            font-size: 17px;
+            max-width: 520px;
+            margin-bottom: 24px;
+        }
+
+        @media(max-width: 900px) {
+            .hero-sub {
+                margin: 0 auto 24px;
+            }
+        }
+
+        .hero-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+
+        .hero-tags span {
+            padding: 8px 14px;
+            background: #fff;
+            border: 1px solid var(--line);
+            border-radius: var(--radius-pill);
+            font-size: 14px;
+        }
+
+        .cta-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            align-items: center;
+        }
+
+        @media(max-width: 900px) {
+            .cta-row {
+                justify-content: center;
+            }
+        }
+
+        .btn {
+            padding: 12px 26px;
+            border-radius: var(--radius-pill);
+            font-weight: 600;
+            transition: var(--transition);
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            border: none;
+        }
+
+        .btn-primary {
+            background: var(--accent-dark);
+            color: #fff;
+            box-shadow: 0 8px 20px rgba(110,85,229,0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+        }
+
+        .btn-telegram {
+            background: var(--telegram);
+            color: #fff;
+            box-shadow: 0 8px 20px rgba(42,171,238,0.35);
+        }
+
+        .btn-telegram:hover {
+            transform: translateY(-3px);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 1px solid var(--accent-dark);
+            color: var(--accent-dark);
+        }
+
+        .btn-outline:hover {
+            background: var(--accent-soft);
+            transform: translateY(-3px);
+        }
+
+        .hero-note {
+            margin-top: 10px;
+            font-size: 13px;
+            color: var(--muted);
+        }
+
+        /* Hero photo */
+        .hero-photo-wrap {
+            max-width: 320px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .hero-photo {
+            padding: 8px;
+            border-radius: 36px;
+            background: linear-gradient(180deg,#ffe9f4,#d5ccff);
+            box-shadow: var(--shadow);
+        }
+
+        .hero-photo-inner {
+            border-radius: 30px;
+            overflow: hidden;
+        }
+
+        .hero-tag {
+            position: absolute;
+            left: -10px;
+            bottom: 22%;
+            padding: 10px 16px;
+            background: #fff;
+            border-radius: var(--radius-pill);
+            font-size: 12px;
+            box-shadow: var(--shadow-soft);
+        }
+
+        .hero-tag-right {
+            position: absolute;
+            right: -8px;
+            top: 8%;
+            padding: 10px 16px;
+            background: rgba(0,0,0,0.78);
+            border-radius: var(--radius-pill);
+            color: #fff;
+            font-size: 12px;
+        }
+
+        .scroll-indicator {
+            margin-top: 40px;
+            text-align: center;
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        .scroll-arrow {
+            width: 20px;
+            height: 20px;
+            border-right: 2px solid var(--muted);
+            border-bottom: 2px solid var(--muted);
+            margin: 0 auto;
+            transform: rotate(45deg);
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0) rotate(45deg);
+            }
+            40% {
+                transform: translateY(-10px) rotate(45deg);
+            }
+            60% {
+                transform: translateY(-6px) rotate(45deg);
+            }
+        }
+
+        /* =====================
+           SECTION WRAPPER
+        ===================== */
+        .section-card {
+            background: #fff;
+            padding: 50px;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-soft);
+            margin-bottom: 40px;
+            transition: var(--transition);
+        }
+
+        .section-card:hover {
+            transform: translateY(-5px);
+        }
+
+        @media(max-width: 700px) {
+            .section-card {
+                padding: 30px 22px;
+            }
+        }
+
+        .section-title {
+            font-size: 30px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: "";
+            width: 44px;
+            height: 3px;
+            background: var(--accent-dark);
+            position: absolute;
+            bottom: -6px;
+            left: 0;
+            border-radius: var(--radius-pill);
+        }
+
+        .section-sub {
+            color: var(--muted);
+            font-size: 15px;
+            margin-bottom: 26px;
+        }
+
+        /* =====================
+           ABOUT
+        ===================== */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 3fr 2fr;
+            gap: 30px;
+        }
+
+        @media(max-width: 850px) {
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .about-text p {
+            font-size: 16px;
+            margin-bottom: 18px;
+            color: var(--muted);
+        }
+
+        .about-highlight {
+            padding: 16px;
+            background: var(--accent-soft);
+            border-radius: var(--radius-md);
+            margin: 14px 0;
+            color: var(--accent-dark);
+            border-left: 5px solid var(--accent-dark);
+        }
+
+        .about-list {
+            list-style: none;
+        }
+
+        .about-list li {
+            display: flex;
+            gap: 10px;
+            align-items: flex-start;
+            font-size: 14px;
+            padding: 8px 0;
+            color: var(--muted);
+        }
+
+        .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--accent-dark);
+            margin-top: 6px;
+        }
+
+        /* =====================
+           SERVICES
+        ===================== */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 24px;
+        }
+
+        @media(max-width: 900px) {
+            .services-grid {
+                grid-template-columns: repeat(2,1fr);
+            }
+        }
+
+        @media(max-width: 600px) {
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .service-card {
+            background: #faf8ff;
+            padding: 26px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--line);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .service-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow);
+        }
+
+        .service-icon {
+            width: 54px;
+            height: 54px;
+            border-radius: 14px;
+            background: var(--accent-soft);
+            color: var(--accent-dark);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+        }
+
+        .service-label {
+            font-size: 17px;
+            font-weight: 600;
+        }
+
+        .service-desc {
+            font-size: 14px;
+            color: var(--muted);
+        }
+
+        /* =====================
+           TESTIMONIALS
+        ===================== */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            gap: 26px;
+        }
+
+        @media(max-width: 800px) {
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .testimonial-card {
+            background: #faf8ff;
+            padding: 26px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--line);
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 16px;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .author-avatar {
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            background: var(--accent-soft);
+            color: var(--accent-dark);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+        }
+
+        .author-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .author-name {
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .author-desc {
+            font-size: 12px;
+            color: var(--muted);
+        }
+
+        /* =====================
+           FAQ
+        ===================== */
+        .faq-list {
+            margin-top: 10px;
+        }
+
+        .faq-item {
+            border: 1px solid var(--line);
+            border-radius: var(--radius-md);
+            margin-bottom: 14px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 16px 20px;
+            font-weight: 600;
+            background: #faf8ff;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: .4s ease;
+            font-size: 14px;
+            color: var(--muted);
+        }
+
+        .faq-answer.active {
+            padding: 16px 20px 18px;
+            max-height: 500px;
+        }
+
+        .faq-toggle {
+            transition: .3s;
+        }
+
+        .faq-toggle.active {
+            transform: rotate(180deg);
+        }
+
+        /* =====================
+           CONTACT
+        ===================== */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1.4fr 1fr;
+            gap: 40px;
+        }
+
+        @media(max-width: 850px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .form-label {
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .form-input,
+        .form-textarea {
+            padding: 12px 16px;
+            border: 1px solid var(--line);
+            border-radius: var(--radius-md);
+            background: #fff;
+            font-size: 14px;
+        }
+
+        .form-textarea {
+            min-height: 130px;
+            resize: vertical;
+        }
+
+        .form-help {
+            font-size: 12px;
+            color: var(--muted);
+        }
+
+        .contact-item {
+            background: #faf8ff;
+            padding: 16px;
+            border-radius: var(--radius-md);
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+
+        .contact-icon {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            background: var(--accent-soft);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--accent-dark);
+        }
+
+        .contact-label {
+            font-size: 12px;
+            color: var(--muted);
+        }
+
+        .contact-value {
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 12px;
+            margin-top: 10px;
+        }
+
+        .social-link {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            background: var(--accent-soft);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+        }
+
+        .social-link.telegram {
+            background: var(--telegram);
+            color: #fff;
+        }
+
+        .social-link.whatsapp {
+            background: var(--whatsapp);
+            color: #fff;
+        }
+
+        .contact-note {
+            margin-top: 16px;
+            font-size: 13px;
+            color: var(--muted);
+        }
+
+        /* =====================
+           NOTIFICATION BANNER
+        ===================== */
+        .notification {
+            position: fixed;
+            left: 50%;
+            bottom: 20px;
+            transform: translateX(-50%);
+            padding: 12px 20px;
+            border-radius: var(--radius-pill);
+            background: #fff;
+            box-shadow: 0 14px 30px rgba(0,0,0,0.15);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 14px;
+            z-index: 2000;
+            opacity: 0;
+            pointer-events: none;
+            transition: .3s ease;
+        }
+
+        .notification.visible {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .notification.success {
+            border-left: 4px solid var(--success);
+        }
+
+        .notification.error {
+            border-left: 4px solid var(--danger);
+        }
+
+        .notification-icon {
+            font-size: 18px;
+        }
+
+        /* =====================
+           FOOTER
+        ===================== */
+        footer {
+            background: #fff;
+            padding: 35px 0;
+            border-top: 1px solid var(--line);
+            text-align: center;
+            font-size: 13px;
+            color: var(--muted);
+        }
+
+        /* =====================
+           ANIMATIONS
+        ===================== */
+        .reveal {
+            opacity: 0;
+            transform: translateY(32px);
+            transition: .6s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* =====================
+           BACK TO TOP
+        ===================== */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: var(--accent-dark);
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            z-index: 1500;
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        @media(max-width: 600px) {
+            .back-to-top {
+                bottom: 18px;
+                right: 18px;
+                width: 44px;
+                height: 44px;
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- ============================
+     HEADER
+============================ -->
+<header class="site-header">
+    <div class="container nav">
+
+        <div class="brand">
+            <div class="brand-badge"></div>
+            <div>Yudina<br><span class="sub">family psychologist</span></div>
+        </div>
+
+        <button class="nav-toggle" aria-label="Меню">
+            <span></span>
+        </button>
+
+        <div class="nav-right">
+            <div class="nav-links">
+                <a href="#home">Головна</a>
+                <a href="#about">Про мене</a>
+                <a href="#services">Програми</a>
+                <a href="#testimonials">Відгуки</a>
+                <a href="#faq">Питання-відповідь</a>
+                <a href="#contact">Контакти</a>
+            </div>
+            <a href="#contact" class="nav-cta">Записатися</a>
+        </div>
+
+    </div>
+</header>
+
+<!-- ============================
+     HERO
+============================ -->
+<section class="hero" id="home">
+    <div class="container hero-inner">
+
+        <!-- LEFT -->
+        <div class="hero-left reveal">
+            <div class="hero-badges">
+                <div class="hero-badge primary">Сімейний та груповий психолог</div>
+                <div class="hero-badge">Онлайн · Оффлайн · Alanya</div>
+            </div>
+
+            <h1 class="hero-title">
+                Професійна психологічна<br>
+                допомога від <span style="color:var(--accent-dark)">Ольги Юдіної</span>
+            </h1>
+
+            <p class="hero-sub">
+                Допомагаю подолати тривогу, кризові стани, конфлікти в стосунках та емоційне вигорання.
+                Працюю з парами, сім’ями та індивідуально, онлайн та офлайн.
+            </p>
+
+            <div class="hero-tags">
+                <span>😰 Тривога та стрес</span>
+                <span>💔 Сімейні конфлікти</span>
+                <span>🔥 Вигорання</span>
+                <span>🛡️ Травми війни</span>
+                <span>💬 Онлайн терапія</span>
+            </div>
+
+            <div class="cta-row">
+                <a href="#contact" class="btn btn-primary">Записатися на консультацію</a>
+                <a href="https://t.me/PsychologYudina" target="_blank" class="btn btn-telegram">
+                    Telegram
+                </a>
+                <button type="button" class="btn btn-outline" id="scrollToFaq">
+                    Часті питання
+                </button>
+            </div>
+
+            <div class="hero-note">
+                Перший контакт — безкоштовне коротке знайомство в Telegram або WhatsApp.
+            </div>
+
+            <div class="scroll-indicator">
+                <span>гортайте вниз</span>
+                <div class="scroll-arrow"></div>
+            </div>
+        </div>
+
+        <!-- RIGHT PHOTO -->
+        <div class="hero-photo-wrap reveal">
+            <div class="hero-photo">
+                <div class="hero-photo-inner">
+                    <img src="img/pp.jpg" alt="Психолог Ольга Юдіна" loading="lazy">
+                </div>
+            </div>
+            <div class="hero-tag"><b>Сімейний психолог</b><br>Пари · Індивідуально</div>
+            <div class="hero-tag-right">Alanya · online / offline</div>
+        </div>
+
+    </div>
+</section>
+
+<!-- ============================
+     ABOUT
+============================ -->
+<section id="about">
+    <div class="container section-card reveal">
+
+        <div class="section-title">Про мене</div>
+        <div class="section-sub">Психолог онлайн та в Аланії</div>
+
+        <div class="about-grid">
+            <div class="about-text">
+                <p>
+                    Мене звати Ольга Юдіна. Я практикуючий психолог із багаторічним досвідом роботи з дорослими,
+                    парами та сім’ями. Допомагаю людям знаходити внутрішню опору, відновлювати стосунки та
+                    повертатися до відчуття життя «в ресурсі».
+                </p>
+                <p>
+                    У роботі поєдную сучасні терапевтичні підходи: когнітивно-поведінкову терапію (КПТ),
+                    сімейні системні методи, арт-терапію, психодраму та тілесно-орієнтовані практики.
+                    Створюю безпечний простір, де можна говорити чесно — без осуду та ярликів.
+                </p>
+                <div class="about-highlight">
+                    Моє завдання — бути поруч, коли вам непросто, і допомогти побачити вихід там,
+                    де здається, що його немає.
+                </div>
+            </div>
+
+            <ul class="about-list">
+                <li><span class="dot"></span>10+ років практики в індивідуальній та сімейній терапії</li>
+                <li><span class="dot"></span>Понад 2000 годин особистих консультацій</li>
+                <li><span class="dot"></span>Супровід клієнтів у період війни та еміграції</li>
+                <li><span class="dot"></span>Спеціалізація в роботі з травмами, вигоранням та стосунками</li>
+                <li><span class="dot"></span>Онлайн та офлайн прийом в Аланії</li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+<!-- ============================
+     SERVICES
+============================ -->
+<section id="services">
+    <div class="container section-card reveal">
+
+        <div class="section-title">Програми та послуги</div>
+        <div class="section-sub">З чим я можу вам допомогти</div>
+
+        <div class="services-grid">
+
+            <div class="service-card">
+                <div class="service-icon">👤</div>
+                <div class="service-label">Індивідуальні консультації</div>
+                <div class="service-desc">
+                    Робота з тривогою, емоційним вигоранням, самооцінкою, особистими кризами та внутрішніми конфліктами.
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">❤️</div>
+                <div class="service-label">Сімейна та парна терапія</div>
+                <div class="service-desc">
+                    Допомагаю парам краще розуміти одне одного, налагодити діалог, відновити довіру та близькість.
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">💻</div>
+                <div class="service-label">Онлайн терапія</div>
+                <div class="service-desc">
+                    Повноцінні сесії з будь-якої країни світу. Зручний формат для тих, хто часто подорожує або живе за кордоном.
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">🌸</div>
+                <div class="service-label">Група «Нова Я»</div>
+                <div class="service-desc">
+                    Терапевтична група для жінок: про кордони, цінність, самоприйняття та підтримку одна одної.
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">🎭</div>
+                <div class="service-label">Арт-терапія та психодрама</div>
+                <div class="service-desc">
+                    М’які методи роботи з глибокими переживаннями через творчість, рольові моделі та образи.
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">🛡️</div>
+                <div class="service-label">Робота з травмами</div>
+                <div class="service-desc">
+                    Підтримка після втрат, насильства, досвіду війни, вимушеного переїзду та життєвих переломних моментів.
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- ============================
+     TESTIMONIALS
+============================ -->
+<section id="testimonials">
+    <div class="container section-card reveal">
+
+        <div class="section-title">Відгуки клієнтів</div>
+        <div class="section-sub">Ті, хто вже пройшов цей шлях</div>
+
+        <div class="testimonials-grid">
+
+            <div class="testimonial-card">
+                <div class="testimonial-text">
+                    “Ольга допомогла мені впоратися з тривогою, яка супроводжувала мене кілька років.
+                    Завдяки терапії я знову відчуваю себе живою, спокійною та стабільною.”
+                </div>
+                <div class="testimonial-author">
+                    <div class="author-avatar">М</div>
+                    <div class="author-info">
+                        <div class="author-name">Марія, 35 років</div>
+                        <div class="author-desc">Індивідуальна терапія</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="testimonial-text">
+                    “Ми з чоловіком були на межі розлучення, але завдяки спільній роботі з Ольгою
+                    навчилися говорити і чути одне одного. Зараз у нас зовсім інша якість стосунків.”
+                </div>
+                <div class="testimonial-author">
+                    <div class="author-avatar">О</div>
+                    <div class="author-info">
+                        <div class="author-name">Олена та Олексій</div>
+                        <div class="author-desc">Сімейна терапія</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- ============================
+     FAQ
+============================ -->
+<section id="faq">
+    <div class="container section-card reveal">
+
+        <div class="section-title">Питання-відповідь</div>
+        <div class="section-sub">Найчастіші питання перед першою сесією</div>
+
+        <div class="faq-list">
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    Скільки триває консультація?
+                    <div class="faq-toggle">▼</div>
+                </div>
+                <div class="faq-answer">
+                    Зазвичай індивідуальна сесія триває 50–60 хвилин.
+                    Сімейні та парні сесії можуть тривати до 90 хвилин — за попередньою домовленістю.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    Чи можлива онлайн робота?
+                    <div class="faq-toggle">▼</div>
+                </div>
+                <div class="faq-answer">
+                    Так, всі формати можливі онлайн через відеозвʼязок (Zoom, WhatsApp, інші платформи).
+                    Ефективність онлайн-сесій не нижча за офлайн.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    Чи гарантується конфіденційність?
+                    <div class="faq-toggle">▼</div>
+                </div>
+                <div class="faq-answer">
+                    Так, конфіденційність — один із базових принципів моєї роботи.
+                    Усе, що ви розповідаєте, залишається тільки між нами.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    Як відбувається запис на консультацію?
+                    <div class="faq-toggle">▼</div>
+                </div>
+                <div class="faq-answer">
+                    Ви можете написати мені в Telegram, WhatsApp або заповнити форму нижче.
+                    Я відповім особисто та запропоную найближчі вільні години.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    Скільки потрібно зустрічей, щоб був результат?
+                    <div class="faq-toggle">▼</div>
+                </div>
+                <div class="faq-answer">
+                    Це індивідуально. Часто перші зміни відчуваються вже після 3–5 зустрічей,
+                    але глибока стабільна робота зазвичай займає більше часу.
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- ============================
+     CONTACT
+============================ -->
+<section id="contact">
+    <div class="container section-card reveal">
+
+        <div class="section-title">Контакти</div>
+        <div class="section-sub">Напишіть мені — відповім особисто</div>
+
+        <div class="contact-grid">
+
+            <!-- FORM -->
+            <div class="contact-form">
+                <div class="form-group">
+                    <label class="form-label" for="name">Ваше ім’я</label>
+                    <input type="text" class="form-input" id="name" placeholder="Як я можу до вас звертатися?">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="phone">Номер телефону</label>
+                    <input type="tel" class="form-input" id="phone" placeholder="+90 ... / +38 ...">
+                    <div class="form-help">Вкажіть номер, на який вам зручно отримати відповідь у WhatsApp.</div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="question">Ваше питання або запит</label>
+                    <textarea class="form-textarea" id="question" placeholder="Коротко опишіть, з чим хочете попрацювати"></textarea>
+                </div>
+
+                <button class="btn btn-primary" id="send">Відправити заявку в WhatsApp</button>
+                <div class="form-help">
+                    Натискаючи кнопку, ви погоджуєтесь на обробку персональних даних для організації консультації.
+                </div>
+            </div>
+
+            <!-- CONTACT INFO -->
+            <div>
+                <div class="contact-item">
+                    <div class="contact-icon">📞</div>
+                    <div>
+                        <div class="contact-label">Телефон / WhatsApp</div>
+                        <div class="contact-value">+90 534 072 07 20</div>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon">✉️</div>
+                    <div>
+                        <div class="contact-label">Email</div>
+                        <div class="contact-value">olhaudina@gmail.com</div>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon">📍</div>
+                    <div>
+                        <div class="contact-label">Адреса офлайн прийому</div>
+                        <div class="contact-value">Kahve Hub, Аланія (2 поверх бізнес-центру)</div>
+                    </div>
+                </div>
+
+                <div class="social-links">
+                    <a href="https://t.me/PsychologYudina" target="_blank" class="social-link telegram" aria-label="Telegram">
+                        ✈
+                    </a>
+                    <a href="https://api.whatsapp.com/send?phone=905340720720" target="_blank" class="social-link whatsapp" aria-label="WhatsApp">
+                        ⌕
+                    </a>
+                </div>
+
+                <div class="contact-note">
+                    Пишіть у зручний час — якщо не відповім одразу, то обовʼязково дам відповідь якнайшвидше.
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- ============================
+     FOOTER
+============================ -->
+<footer>
+    © 2024 Психолог Ольга Юдіна — всі права захищені.
+</footer>
+
+<!-- Notification -->
+<div class="notification" id="notification">
+    <span class="notification-icon" id="notificationIcon">✔</span>
+    <span id="notificationText">Повідомлення</span>
+</div>
+
+<!-- Back to top -->
+<div class="back-to-top" id="backToTop">↑</div>
+
+<!-- ============================
+     JS
+============================ -->
+<script>
+    // Sticky header
+    const header = document.querySelector(".site-header");
+    window.addEventListener("scroll", () => {
+        header.classList.toggle("scrolled", window.scrollY > 10);
+    });
+
+    // Mobile nav
+    const navToggle = document.querySelector(".nav-toggle");
+    const navLinks = document.querySelector(".nav-links");
+
+    navToggle.addEventListener("click", () => {
+        navLinks.classList.toggle("open");
+        navToggle.classList.toggle("active");
+    });
+
+    document.querySelectorAll(".nav-links a").forEach(link => {
+        link.addEventListener("click", e => {
+            const href = link.getAttribute("href");
+            if (href && href.startsWith("#")) {
+                e.preventDefault();
+                document.querySelector(href).scrollIntoView({behavior: "smooth"});
+                navLinks.classList.remove("open");
+                navToggle.classList.remove("active");
+            }
+        });
+    });
+
+    // Scroll to FAQ button
+    const scrollToFaqBtn = document.getElementById("scrollToFaq");
+    if (scrollToFaqBtn) {
+        scrollToFaqBtn.addEventListener("click", () => {
+            const faqSection = document.getElementById("faq");
+            if (faqSection) {
+                faqSection.scrollIntoView({behavior: "smooth"});
+            }
+        });
+    }
+
+    // Reveal animation
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {threshold: 0.15});
+
+    document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+
+    // FAQ accordion
+    document.querySelectorAll(".faq-question").forEach(q => {
+        q.addEventListener("click", () => {
+            const answer = q.nextElementSibling;
+            const toggle = q.querySelector(".faq-toggle");
+
+            document.querySelectorAll(".faq-answer").forEach(a => {
+                if (a !== answer) {
+                    a.classList.remove("active");
+                    const t = a.previousElementSibling.querySelector(".faq-toggle");
+                    if (t) t.classList.remove("active");
+                }
+            });
+
+            answer.classList.toggle("active");
+            toggle.classList.toggle("active");
+        });
+    });
+
+    // Back to top
+    const backToTop = document.getElementById("backToTop");
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 500) {
+            backToTop.classList.add("visible");
+        } else {
+            backToTop.classList.remove("visible");
+        }
+    });
+
+    backToTop.addEventListener("click", () => {
+        window.scrollTo({top: 0, behavior: "smooth"});
+    });
+
+    // Notification helper
+    const notification = document.getElementById("notification");
+    const notificationText = document.getElementById("notificationText");
+    const notificationIcon = document.getElementById("notificationIcon");
+    let notificationTimeout;
+
+    function showNotification(message, type = "success") {
+        notificationText.textContent = message;
+        notification.classList.remove("success", "error");
+        notification.classList.add(type, "visible");
+        notificationIcon.textContent = type === "success" ? "✔" : "⚠";
+
+        clearTimeout(notificationTimeout);
+        notificationTimeout = setTimeout(() => {
+            notification.classList.remove("visible");
+        }, 3500);
+    }
+
+    // WhatsApp form submit
+    const sendBtn = document.getElementById("send");
+    sendBtn.addEventListener("click", () => {
+        const name = document.getElementById("name").value.trim();
+        const phone = document.getElementById("phone").value.trim();
+        const question = document.getElementById("question").value.trim();
+
+        if (!name || !phone) {
+            showNotification("Будь ласка, заповніть ім’я та номер телефону.", "error");
+            return;
+        }
+
+        const message =
+            "Добрий день!%0A" +
+            "Мене звати: " + encodeURIComponent(name) + "%0A" +
+            "Мій номер телефону: " + encodeURIComponent(phone) + "%0A" +
+            "Питання / Запит: " + encodeURIComponent(question || "не вказано") + "%0A%0A" +
+            "Напишіть мені, будь ласка.";
+
+        const whatsappUrl = "https://api.whatsapp.com/send?phone=905340720720&text=" + message;
+
+        showNotification("Відкривається WhatsApp...", "success");
+        window.open(whatsappUrl, "_blank");
+    });
+</script>
+
+</body>
+</html>
